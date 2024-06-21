@@ -159,8 +159,8 @@ export const ImageUpload = () => {
       formData.append("file", selectedFile);
       let res = await axios({
         method: "post",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         url: "https://potato-disease-predictor.onrender.com/",
-        withCredentials: false,
         data: formData,
       });
       if (res.status === 200) {
