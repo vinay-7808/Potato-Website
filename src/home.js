@@ -160,7 +160,7 @@ export const ImageUpload = () => {
       let res = await axios({
         method: "post",
         url: "https://potato-disease-predictor.onrender.com/",
-        mode: "cors",
+        withCredentials: false,
         data: formData,
       });
       if (res.status === 200) {
